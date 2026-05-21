@@ -17,5 +17,5 @@ int main()
 
     int port = std::getenv("PORT") ? std::stoi(std::getenv("PORT")) : 8080;
 
-    app.port(port).multithreaded().run();
+    app.port(port).bindaddr("0.0.0.0").run();
 }
