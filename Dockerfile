@@ -15,4 +15,6 @@ COPY . .
 
 RUN cmake . && make
 
-CMD ["./sera_backend"]
+EXPOSE 8080
+
+CMD ["/app/sera_backend"]
