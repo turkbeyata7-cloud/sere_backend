@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     git \
     make \
     file \
-    libboost-all-dev
+    libboost-all-dev \
+    libasio-dev
 
 WORKDIR /app
 
