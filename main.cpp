@@ -1,4 +1,5 @@
 #include "crow.h"
+#include <cstdlib>
 
 int main()
 {
@@ -14,5 +15,7 @@ int main()
         return "Veri geldi: " + req.body;
     });
 
-    app.port(8080).multithreaded().run();
+    int port = std::getenv("PORT") ? std::stoi(std::getenv("PORT")) : 8080;
+
+    app.port(port).multithreaded().run();
 }
