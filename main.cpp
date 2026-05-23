@@ -1,5 +1,6 @@
 #include "crow.h"
 #include <cstdlib>
+#include<iostream>
 
 int main()
 {
@@ -12,6 +13,8 @@ int main()
 
     CROW_ROUTE(app, "/data").methods("POST"_method)
     ([](const crow::request& req){
+
+        std::cout<<"Gelen veri: "<<req.body<<std::endl;
         return "Veri geldi: " + req.body;
     });
 
